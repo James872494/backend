@@ -33,6 +33,7 @@ import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { PaymentsModule } from './payments/payments.module';
 import { MongooseModule } from '@nestjs/mongoose';
+import { TestModule } from './test/test.module';
 
 // Ensure DATABASE_URI exists
 const mongoUri = process.env.DATABASE_URI;
@@ -46,6 +47,7 @@ if (!mongoUri) {
     BookingModule,
     UsersModule,
     AuthModule,
+    TestModule,
     PaymentsModule,
     MongooseModule.forRoot(mongoUri, {
       dbName: 'quikcart', // optional but explicit
